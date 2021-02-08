@@ -5,16 +5,16 @@
 
 !!! WARNING !!!
 
-This file was auto-generated from readme/api/references/plugin_manifest.md and any manual change
+This file was auto-generated from readme/gsoc2021/pull_request_guidelines.md and any manual change
 made to it will be overwritten. To make a change to this file please modify
 the source Markdown file:
 
-https://github.com/laurent22/joplin/blob/dev/readme/api/references/plugin_manifest.md
+https://github.com/laurent22/joplin/blob/dev/readme/gsoc2021/pull_request_guidelines.md
 
 -->
 
 <head>
-	<title>Plugin Manifest | Joplin</title>
+	<title>Rules to submit a pull request | Joplin</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -304,7 +304,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/api/references/plugin_manife
 
 <body>
 
-<div class="container root page-plugin_manifest">
+<div class="container root page-pull_request_guidelines">
 
 <div class="header">
 	<a class="forkme" href="https://github.com/laurent22/joplin"><img src="https://joplinapp.org/images/ForkMe.png"/></a>
@@ -405,88 +405,32 @@ https://github.com/laurent22/joplin/blob/dev/readme/api/references/plugin_manife
 </div>
 
 	<div class="main">
-<h1>Plugin Manifest<a name="plugin-manifest" href="#plugin-manifest" class="heading-anchor">🔗</a></h1>
-<p>The manifest file is a JSON file that describes various properties of the plugin. If you use the Yeoman generator, it should be automatically generated based on the answers you've provided. The supported properties are:</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Required?</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>manifest_version</code></td>
-<td>number</td>
-<td><strong>Yes</strong></td>
-<td>For now should always be &quot;1&quot;.</td>
-</tr>
-<tr>
-<td><code>name</code></td>
-<td>string</td>
-<td><strong>Yes</strong></td>
-<td>Name of the plugin. Should be a user-friendly string, as it will be displayed in the UI.</td>
-</tr>
-<tr>
-<td><code>version</code></td>
-<td>string</td>
-<td><strong>Yes</strong></td>
-<td>Version number such as &quot;1.0.0&quot;.</td>
-</tr>
-<tr>
-<td><code>app_min_version</code></td>
-<td>string</td>
-<td><strong>Yes</strong></td>
-<td>Minimum version of Joplin that the plugin is compatible with. In general it should be whatever version you are using to develop the plugin.</td>
-</tr>
-<tr>
-<td><code>description</code></td>
-<td>string</td>
-<td>No</td>
-<td>Detailed description of the plugin.</td>
-</tr>
-<tr>
-<td><code>author</code></td>
-<td>string</td>
-<td>No</td>
-<td>Plugin author name.</td>
-</tr>
-<tr>
-<td><code>keywords</code></td>
-<td>string[]</td>
-<td>No</td>
-<td>Keywords associated with the plugins. They are used in search in particular.</td>
-</tr>
-<tr>
-<td><code>homepage_url</code></td>
-<td>string</td>
-<td>No</td>
-<td>Homepage URL of the plugin. It can also be, for example, a link to a GitHub repository.</td>
-</tr>
-<tr>
-<td><code>repository_url</code></td>
-<td>string</td>
-<td>No</td>
-<td>Repository URL where the plugin source code is hosted.</td>
-</tr>
-</tbody>
-</table>
-<h2>Manifest example<a name="manifest-example" href="#manifest-example" class="heading-anchor">🔗</a></h2>
-<pre><code class="language-json">{
-    &quot;manifest_version&quot;: 1,
-    &quot;name&quot;: &quot;Joplin Simple Plugin&quot;,
-    &quot;description&quot;: &quot;To test loading and running a plugin&quot;,
-    &quot;version&quot;: &quot;1.0.0&quot;,
-    &quot;author&quot;: &quot;John Smith&quot;,
-    &quot;app_min_version&quot;: &quot;1.4&quot;,
-    &quot;homepage_url&quot;: &quot;https://joplinapp.org&quot;
-}
-</code></pre>
+<h1>Rules to submit a pull request<a name="rules-to-submit-a-pull-request" href="#rules-to-submit-a-pull-request" class="heading-anchor">🔗</a></h1>
+<p>Due to our limited resources and in order to give everyone a chance to submit a pull request, we have put restrictions in place this year. If you want to submit a pull request, please take into account the following rules:</p>
+<ol>
+<li>
+<p>Pull requests must be based on an issue that existed <strong>before GSoC was started</strong>, or based on an issue created by a moderator.</p>
+</li>
+<li>
+<p>Each contributor <strong>may only create one pull request at a time</strong>. In some rare cases, once your pull request has been merged, you may be allowed to post a second one, in which case we will let you know. We have this rule in place due to our limited resources - if everyone was allowed to post multiple pull requests we will not be able to review them properly. It is also better for you because you only need to care about one PR - so spend time making sure it is as good as it can be - make sure it works well, has test units, documentation and screenshots (if relevant).</p>
+</li>
+<li>
+<p>If the pull request has serious issues, or would require a significant rewrite to be acceptable, we might closed it and you will not be allowed to open a new one. So <strong>please be careful when posting a PR</strong>.</p>
+</li>
+<li>
+<p><strong>If you are borrowing code, please disclose it</strong>. It is fine and sometimes even recommended to borrow code, but we need to know about it to assess your work. If we find out that your pull request contains a lot of code copied from elsewhere, we will close the pull request.</p>
+</li>
+<li>
+<p><strong>All pull request must have test units</strong>. If for some reason it is not possible to add tests, please let us know and explain why.</p>
+</li>
+<li>
+<p><strong>No Work In Progress</strong>. ONLY completed and working pull requests, and with test units, will be accepted. A WIP would fall under rule 3 and be closed immediately.</p>
+</li>
+</ol>
+<p>These rules we hope are fair to everyone, to contributors and maintainers, however if something is unclear or you have any question about them, please let us know!</p>
 
 		<div class="bottom-links">
-			<a href="https://github.com/laurent22/joplin/blob/dev/readme/api/references/plugin_manifest.md">
+			<a href="https://github.com/laurent22/joplin/blob/dev/readme/gsoc2021/pull_request_guidelines.md">
 				<i class="fa fa-github"></i> Improve this doc
 			</a>
 		</div>
